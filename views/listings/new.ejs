@@ -4,12 +4,11 @@
         <br><br>
         <body>
             <h3>Create a new listing </h3>
-            <form method="POST" action="/listings"  novalidate class="needs-validation">
+            <form method="POST" action="/listings"  novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3 mt-3">
                     <label for="title" class="form-label">Title</label>
                     <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control" required>
                     <div class="valid-feedback">Looking good</div>
-                    <div class="invalid-feedback">Title should be enterd</div>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
@@ -17,9 +16,10 @@
                     <div class="valid-feedback">You field it</div>
                     <div class="invalid-feedback">Please enter a short description</div>
                 </div>
+                
                 <div class="mb-3">
-                    <label for="image" class="form-label">Image</label>
-                    <input name="listing[image][url]" placeholder="enter image / URL link" type="text" class="form-control">
+                    <label for="image" class="form-label">Upload Listing Image</label>
+                    <input name="listing[image]" type="file" class="form-control">
                 </div>
                 <div class="row">
                     <div class="mb-3 col-md-4">
